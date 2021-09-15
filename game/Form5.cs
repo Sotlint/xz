@@ -26,8 +26,8 @@ namespace game
             int i = rnd.Next(1, 4);
             if(i == 1)
             {
-                generator.gen_w();
-                if (generator.weapon == 11) //мечи
+                generator.gen_w(); // сделать отдельное поле для в каждо предмете, хранящее его описание.
+                if (generator.weapon == 11) //мечи 
                 {
                     label1.Text = "меч +1 - урон от одноручных мечей зависит в равной степени от ловкости и силы ";
                 }
