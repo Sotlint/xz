@@ -21,7 +21,7 @@ namespace game
             int t = rnd.Next(1, 4);
             
             int v = rnd.Next(1, 5);
-
+                // упростить, сделать массивы для более удобного доступа, обращаться в циклах 
             if (v == 1)  //sword 
             {
                 if (t == 1)
@@ -232,7 +232,7 @@ namespace game
                 }
                 if (t == 3)
                 {
-                    armor = 33;
+                    armor = 33; // повторяющийся код
                 }
             }
 

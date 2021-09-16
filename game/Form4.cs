@@ -16,7 +16,7 @@ namespace game
         {
             InitializeComponent();
             
-          textBox1.Text = hero.str.ToString();
+          textBox1.Text = hero.str.ToString(); // сделать в цикле
           textBox2.Text = hero.dex.ToString();
           textBox3.Text = hero.wiz.ToString();
           textBox4.Text = hero.telo.ToString();

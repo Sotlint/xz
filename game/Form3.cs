@@ -12,7 +12,7 @@ namespace game
 {
     public partial class Form3 : Form
     {
-
+        public const  double kf = 2;
 
         public static int ind = 0;
 
@@ -24,10 +24,10 @@ namespace game
                 if (hero.ust >= 3)
                 {
 
-                    hero.damage = hero.damage / 2;
-                    hero.block = hero.block / 2;
-                    hero.crit = hero.crit / 2;
-                    hero.dodje = hero.dodje / 2;
+                    hero.damage = hero.damage / kf;
+                    hero.block = hero.block / kf;
+                    hero.crit = hero.crit / kf;
+                    hero.dodje = hero.dodje / kf;
                     ind = 1;
 
 
@@ -78,7 +78,7 @@ namespace game
 
                 i = rnd.Next(1, 6); //генерация события
 
-                if (i == 1)
+                if (i == 1) // код повторяется со строкой 136
                 {
                     hero.ust = hero.ust + 1;
                     label4.Text = hero.ust.ToString();
@@ -123,9 +123,11 @@ namespace game
      
         private void button1_Click(object sender, EventArgs e) //вниз
         {
-            if ((pictureBox26.Location.Y + 57) < 286)
+            int y_step = 57;
+            int y_max = 286;
+            if ((pictureBox26.Location.Y + y_step) < y_max )
             {
-                pictureBox26.Location = new Point(pictureBox26.Location.X, pictureBox26.Location.Y + 57);
+                pictureBox26.Location = new Point(pictureBox26.Location.X, pictureBox26.Location.Y + y_step);
 
                 
 
@@ -175,7 +177,7 @@ namespace game
 
         private void button3_Click(object sender, EventArgs e) //вправо
         {
-            if ((pictureBox26.Location.X + 57) < 288)
+            if ((pictureBox26.Location.X + 57) < 288) // сделать константы
             {
                 pictureBox26.Location = new Point(pictureBox26.Location.X + 57, pictureBox26.Location.Y);
 
